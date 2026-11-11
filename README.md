@@ -615,6 +615,35 @@ The API uses a global exception handling system that returns standardized respon
 3. **Automatic Calculation:** The total sale value is automatically calculated based on prices and quantities.
 4. **Validations:** The system validates the existence of customers and products before processing sales.
 
-## Author
+## How to run the project
+### Prerequisites
+- Docker installed
 
-* [@Thiago](https://www.github.com/xThgSilva)
+### Steps
+1. Clone the project
+```bash
+git clone https://github.com/xThgSilva/sales-system-api.git
+```
+
+2. Create the environment file .env using the .env.example
+
+3. Open the .env file and fill in the values:
+```bash
+DB_NAME={database_name}
+DB_USER={database_user}
+DB_PASSWORD={database_password}
+```
+
+4. Build and start the containers:
+```bash
+docker compose up -d
+```
+The first run may take a few minutes to compile the project and download the images
+
+5. The API will be available in `http://localhost:8080`
+
+### Useful commands
+```bash
+docker compose logs backend # API logs
+docker compose down         # Stop containers
+```
